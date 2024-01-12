@@ -1,5 +1,9 @@
 /**
- * Interac email parser. Extracts the relevant data and returns a JSON object.
+ * Interac email parser. 
+ * Parses an email object sent by Interac and returns a JSON object representing the data.
+ * 
+ * Input: A raw email (RFC 5322) that has been parsed using MailParser. 
+ *        MailParser is part of the node package mailparser. (https://nodemailer.com/extras/mailparser/).
  * 
  * @class
  * @author Lisa Wall <lisac@live.ca>
