@@ -3,18 +3,18 @@ A parser that takes an email object sent by Interac and returns a JSON object re
 
 # Purpose
 
-Having a object representing an Interac email is useful for many things, particularly where you wish to respond to a customer's eTransfer in an automated way.
+Having an object representing an Interac email is useful for many things, particularly to respond to a customer's eTransfer in an automated way.
 
-The first thing I will be using this parser for is to provide automated rent receipts to our tenants. That project will be posted on GitHub shortly.
+The first thing I will be using this parser for is to provide automated rent receipts to our tenants. That component will also be posted on GitHub shortly.
 
 # Input
 
 A raw email (RFC 5322) that has been parsed using MailParser. MailParser is part of the node package mailparser. (https://nodemailer.com/extras/mailparser/). 
 
 # Process
-Traverse the fields of the MailParser object, pull out the relevant ones and build the result object.
+Traverse the fields of the MailParser object, pull out the relevant fields, do some validation, and build the result object.
 
-For this implementation, I'm not interested in all email fields; just the ones relevant to payments, recipients, language etc. See the sample output below.
+For this implementation, I'm not interested in all email fields; just the ones relevant to payments, recipients, auto-deposit, language etc. See the sample output below.
 
 # Output
 
