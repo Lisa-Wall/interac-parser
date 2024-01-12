@@ -1,5 +1,5 @@
 # interac-parser
-A parser that takes an email object sent by Interac and returns a JSON object representation the relevant data.
+A parser that takes an email object sent by Interac and returns a JSON object representing the data.
 
 # Purpose
 
