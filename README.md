@@ -5,7 +5,16 @@ A parser that takes an email object sent by Interac and returns a JSON object re
 
 Having an object representing an Interac email is useful for many things, particularly to respond to a customer's eTransfer in an automated way.
 
-The first thing I will be using this parser for is to provide automated rent receipts to our tenants. That component will also be posted on GitHub shortly.
+The first thing I will be using this parser for is to provide automated rent receipts to our tenants.
+
+This component is part of a group of components that will work together to produce rent receipts automatically in response to a client sending an eTransfer.
+
+Components:
+
+1. interac-parser (this component): converts an Interac email into a JSON object containing the data relevant to the receipt.
+2. payment-validator: validates an Interac payment (JSON object from #1) and produces another JSON object formatted ready to for PDF conversion.
+3. receipt-generator: Converts the JSON object from #2 to a PDF receipt
+4. receipt-mailer: Mails the receipt to the client.
 
 # Input
 
